@@ -15,7 +15,14 @@ export const defaultTheme = {
   'yellow-dark': '#C47F17',
   'yellow-light': '#F1E9C9',
 
-  purple: '#4B2995 ',
-  'purple-dark': '#8047F8',
+  purple: '#8047F8 ',
+  'purple-dark': '#4B2995',
   'purple-light': '#EBE5F9',
+
+  regularS: '400 0.875rem "Roboto", sans-serif',
+  boldS: '700 0.75rem "Roboto", sans-serif',
+  regularM: '400 1rem"Roboto", sans-serif',
+  boldM: '700 1rem "Roboto", sans-serif',
+  regularL: '400 1.25rem "Roboto", sans-serif',
+  boldL: '700 1.255rem "Roboto", sans-serif',
 }
