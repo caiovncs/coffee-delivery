@@ -1,3 +1,11 @@
+import { CoffeeListSection } from './CoffeeListSection'
+import { Main } from './Main'
+
 export function Home() {
-  return <h1>Home</h1>
+  return (
+    <>
+      <Main />
+      <CoffeeListSection />
+    </>
+  )
 }

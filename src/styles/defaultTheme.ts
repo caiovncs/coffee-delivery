@@ -25,4 +25,10 @@ export const defaultTheme = {
   boldM: '700 1rem "Roboto", sans-serif',
   regularL: '400 1.25rem "Roboto", sans-serif',
   boldL: '700 1.255rem "Roboto", sans-serif',
+
+  titleXL: '800 3rem/130% "Baloo 2", sans-serif',
+  titleL: '800 2rem/130% "Baloo 2", sans-serif',
+  titleM: '800 1.5rem/130% "Baloo 2", sans-serif',
+  titleS: '700 1.25rem/130% "Baloo 2", sans-serif',
+  titleXS: '700 1.125rem/130% "Baloo 2", sans-serif',
 }

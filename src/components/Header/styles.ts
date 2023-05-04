@@ -1,13 +1,6 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
-  max-width: 76rem;
-  // height: 100vh;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  margin: 0 auto;
-  background-color: ${(props) => props.theme.background};
-
   padding-top: 2rem;
   padding-bottom: 2rem;
   display: flex;
