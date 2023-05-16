@@ -36,15 +36,19 @@ export const CoffeeListContainer = styled.section`
       height: 120px;
     }
 
-    .tag {
+    .tags {
+      display: flex;
+      gap: 4px;
       margin-bottom: 16px;
-      padding: 4px 8px;
-      background-color: ${(props) => props.theme['yellow-light']};
-      gap: 40px;
-      border-radius: 100px;
-      text-align: center;
-      color: ${(props) => props.theme['yellow-dark']};
-      font: ${(props) => props.theme.tag};
+
+      > span {
+        padding: 4px 8px;
+        border-radius: 100px;
+        text-align: center;
+        color: ${(props) => props.theme['yellow-dark']};
+        font: ${(props) => props.theme.tag};
+        background-color: ${(props) => props.theme['yellow-light']};
+      }
     }
 
     .nome {
@@ -86,25 +90,8 @@ export const CoffeeListContainer = styled.section`
       gap: 8px;
     }
 
-    .qtd {
-      padding: 8px;
-      gap: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: ${(props) => props.theme['base-button']};
-      border-radius: 6px;
-      height: 38px;
-
-      > span {
-        color: ${(props) => props.theme['base-title']};
-        font: ${(props) => props.theme.regularM};
-      }
-    }
-
     .teste {
       color: white;
-      /* text-align: center; */
     }
     .buycart {
       padding: 0.5rem;

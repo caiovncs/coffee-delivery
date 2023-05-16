@@ -4,7 +4,8 @@ import americano from '../../../assets/coffee/americano.svg'
 import expressocremoso from '../../../assets/coffee/expressocremoso.svg'
 import cafegelado from '../../../assets/coffee/cafegelado.svg'
 import cafecomleite from '../../../assets/coffee/cafecomleite.svg'
-import { Minus, Plus, ShoppingCart } from '@phosphor-icons/react'
+import { ShoppingCart } from '@phosphor-icons/react'
+import { Counter } from '../../../components/Counter'
 
 export function CoffeeListSection() {
   const produtos = [
@@ -53,17 +54,17 @@ export function CoffeeListSection() {
           return (
             <div>
               <img src={item.srcImg} alt={item.nome} />
-              <span className="tag">{item.tags}</span>
+              <span className="tags">
+                {item.tags.map((tag) => {
+                  return <span>{tag}</span>
+                })}
+              </span>
               <h1 className="nome">{item.nome}</h1>
               <p className="desc">{item.descricao}</p>
               <div className="buy">
                 <span className="preco">{item.preco}</span>
                 <span className="actions">
-                  <div className="qtd">
-                    <Minus size={14} color="#4B2995" />
-                    <span>0</span>
-                    <Plus size={14} color="#4B2995" />
-                  </div>
+                  <Counter />
                   <span className="buycart">
                     <ShoppingCart weight="fill" size={22} className="teste" />
                   </span>
