@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const CartContainer = styled.section`
-  height: 3000px;
   padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
   display: flex;
   justify-content: space-between;
 
@@ -98,15 +98,15 @@ export const CartContainer = styled.section`
       margin-top: 32px;
       gap: 0.75rem;
     }
-    .cartoes p {
+    .cartoes button {
       background-color: ${(props) => props.theme['base-button']};
       color: ${(props) => props.theme['base-text']};
       font: ${(props) => props.theme.buttonS};
       display: flex;
-      /* align-items: center; */
       width: 100%;
       padding: 1rem;
       gap: 0.75rem;
+      border: none;
       border-radius: 6px;
 
       :hover {
@@ -133,12 +133,17 @@ export const CartContainer = styled.section`
       padding: 2.5rem;
       background-color: ${(props) => props.theme['base-card']};
       border-radius: 6px 44px;
-      gap: 24px;
       margin-top: 1rem;
 
       .coffeeComponent {
         display: flex;
         justify-content: space-between;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid ${(props) => props.theme['base-button']};
+
+        :nth-child(n + 2) {
+          margin-top: 2rem;
+        }
 
         > span {
           color: ${(props) => props.theme['base-text']};
@@ -195,6 +200,7 @@ export const CartContainer = styled.section`
         padding: 12px 0px;
         border-radius: 6px;
         border: 2px solid transparent;
+        font: ${(props) => props.theme.buttonG};
 
         :hover {
           border: 2px solid ${(props) => props.theme['yellow-dark']};
@@ -207,12 +213,22 @@ export const CartContainer = styled.section`
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
 
       .totalItens,
-      .entrega,
+      .entrega {
+        display: flex;
+        justify-content: space-between;
+        color: ${(props) => props.theme['base-text']};
+        font: ${(props) => props.theme.regularM};
+      }
+
       .total {
         display: flex;
         justify-content: space-between;
+        color: ${(props) => props.theme['base-subtitle']};
+        font: ${(props) => props.theme.boldL};
       }
     }
   }

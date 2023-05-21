@@ -13,6 +13,7 @@ import { Counter } from '../../components/Counter'
 // import expressocremoso from '../../../assets/coffee/expressocremoso.svg'
 // import cafegelado from '../../../assets/coffee/cafegelado.svg'
 // import cafecomleite from '../../../assets/coffee/cafecomleite.svg'
+import { NavLink } from 'react-router-dom'
 
 export function Cart() {
   return (
@@ -49,16 +50,16 @@ export function Cart() {
             </div>
           </div>
           <div className="cartoes">
-            <p>
+            <button>
               <CreditCard size={16} color="#8047F8" /> CARTÃO DE CRÉDITO
-            </p>
-            <p>
+            </button>
+            <button>
               <Bank size={16} color="#8047F8" /> CARTÃO DE DÉBITO
-            </p>
-            <p>
+            </button>
+            <button>
               <Money size={16} color="#8047F8" />
               DINHEIRO
-            </p>
+            </button>
           </div>
         </div>
       </div>
@@ -67,6 +68,38 @@ export function Cart() {
         <span>Cafés selecionados</span>
 
         <div className="coffeeSelected">
+          <div className="coffeeComponent">
+            <div className="coffeeInfo">
+              <img src={expresso} alt="" />
+              <div className="cofeeDetails">
+                <h2>Nome do cafe</h2>
+                <span>
+                  <Counter />
+                </span>
+                <button className="removeCoffee">
+                  <Trash size={16} color="#8047F8" /> REMOVER
+                </button>
+              </div>
+            </div>
+            <span>R$ 9.99</span>
+          </div>
+
+          <div className="coffeeComponent">
+            <div className="coffeeInfo">
+              <img src={expresso} alt="" />
+              <div className="cofeeDetails">
+                <h2>Nome do cafe</h2>
+                <span>
+                  <Counter />
+                </span>
+                <button className="removeCoffee">
+                  <Trash size={16} color="#8047F8" /> REMOVER
+                </button>
+              </div>
+            </div>
+            <span>R$ 9.99</span>
+          </div>
+
           <div className="coffeeComponent">
             <div className="coffeeInfo">
               <img src={expresso} alt="" />
@@ -97,8 +130,9 @@ export function Cart() {
               <span>R$ 25,99</span>
             </div>
           </div>
-
-          <button className="confirm">CONFIRMAR PEDIDO</button>
+          <NavLink to="/success">
+            <button className="confirm">CONFIRMAR PEDIDO</button>
+          </NavLink>
         </div>
       </div>
     </CartContainer>

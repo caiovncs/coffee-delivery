@@ -28,6 +28,7 @@ export const defaultTheme = {
 
   tag: '700 10px/130% "Roboto", sans-serif',
   buttonS: '400 0.75rem/160% "Roboto", sans-serif',
+  buttonG: '700 0.875rem/160% "Roboto", sans-serif',
 
   titleXL: '800 3rem/130% "Baloo 2", sans-serif',
   titleL: '800 2rem/130% "Baloo 2", sans-serif',
