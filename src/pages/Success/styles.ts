@@ -1,75 +1,38 @@
 import styled from 'styled-components'
 
 export const SuccessContainer = styled.section`
-  margin-top: 80px;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 2.5rem;
 
-  .titleSuccess {
-    h1 {
-      margin-bottom: 4px;
-      color: ${(props) => props.theme['yellow-dark']};
-      font: ${(props) => props.theme.titleL};
-    }
-    span {
-      color: ${(props) => props.theme['base-subtitle']};
-      font: ${(props) => props.theme.regularL};
-    }
+  h1 {
+    color: ${({ theme }) => theme.colors['brand-yellow-dark']};
   }
 
-  .contentSuccess {
+  > section {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+`
 
-    .sendData {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      padding: 40px;
-      border: 2px solid ${(props) => props.theme.purple};
-      border-radius: 6px 36px 6px 36px;
-      width: 100%;
-      max-width: 526px;
+export const SuccessDetailsdContainer = styled.div`
+  padding: 2.5rem;
+  border-radius: 6px 36px 6px 36px;
+  background: ${({ theme }) => theme.colors['base-background']};
+  min-width: 32rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
 
-      .sendAddress,
-      .sendDeliveryTime,
-      .sendPayment {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-
-        .addressIcon,
-        .deliveryTimeIcon,
-        .paymentIcon {
-          padding: 0.5rem;
-          border-radius: 100%;
-          display: flex;
-          align-items: center;
-          color: #fff;
-        }
-
-        .addressIcon {
-          background-color: ${(props) => props.theme.purple};
-        }
-        .deliveryTimeIcon {
-          background-color: ${(props) => props.theme.yellow};
-        }
-        .paymentIcon {
-          background-color: ${(props) => props.theme['yellow-dark']};
-        }
-
-        .addressContent,
-        .deliveryContent,
-        .paymentContent {
-          p {
-            color: ${(props) => props.theme['base-text']};
-            font: ${(props) => props.theme.regularM};
-          }
-        }
-      }
-    }
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 7px 37px 7px 37px;
+    z-index: -1;
+    background: linear-gradient(102.89deg, #dbac2c 2.61%, #8047f8 98.76%);
   }
 `

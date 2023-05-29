@@ -1,11 +1,13 @@
-import { CoffeeListSection } from './CoffeeListSection'
-import { Main } from './Main'
+import React from 'react'
+import { HeroSection } from './components/HeroSection'
+import { HomeContainer } from './styles'
+import { OurCoffees } from './components/OurCoffees'
 
-export function Home() {
+export const HomePage = () => {
   return (
-    <>
-      <Main />
-      <CoffeeListSection />
-    </>
+    <HomeContainer>
+      <HeroSection />
+      <OurCoffees />
+    </HomeContainer>
   )
 }
