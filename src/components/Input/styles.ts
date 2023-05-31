@@ -1,23 +1,42 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const InputStyleContainer = styled.input`
+export const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  position: relative;
+
+  > p {
+    color: ${({ theme }) => theme.colors['base-error']};
+  }
+`
+
+interface InputContainerProps {
+  hasError: boolean
+}
+
+export const InputStyleContainer = styled.div<InputContainerProps>`
   height: 2.625rem;
   border-radius: 4px;
   border: 1px solid ${({ theme }) => theme.colors['base-button']};
   background: ${({ theme }) => theme.colors['base-input']};
+  display: flex;
+  align-items: center;
   transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
 
-  color: ${({ theme }) => theme.colors['base-text']};
-  padding: 0 0.75rem;
-  font-size: 0.75rem;
-
-  &::placeholder {
-    color: ${({ theme }) => theme.colors['base-label']};
-  }
-
-  &:focus {
+  &:focus-within {
     border-color: ${({ theme }) => theme.colors['brand-yellow-dark']};
   }
+
+  ${({ theme, hasError }) =>
+    hasError &&
+    css`
+      border-color: ${theme.colors['base-error']};
+    `}
 `
 
 export const InputStyled = styled.input`

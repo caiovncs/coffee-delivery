@@ -1,6 +1,8 @@
 import { PaymentMethodOptionsContainer } from './styles'
 import { PaymentMethodInput } from '../PaymentMethodInput'
 import { CreditCard, Money, Bank } from '@phosphor-icons/react'
+import { useFormContext } from 'react-hook-form'
+import { RegularText } from '../../../../components/Typhography'
 
 export const paymentMethods = {
   credit: {
@@ -18,11 +20,27 @@ export const paymentMethods = {
 }
 
 export function PaymentMethodOptions() {
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext()
+
+  const paymentMethodError = errors?.paymentMethod?.message as unknown as string
+
   return (
     <PaymentMethodOptionsContainer>
-      <PaymentMethodInput />
-      <PaymentMethodInput />
-      <PaymentMethodInput />
+      {Object.entries(paymentMethods).map(([key, { label, icon }]) => (
+        <PaymentMethodInput
+          key={label}
+          id={key}
+          icon={icon}
+          label={label}
+          value={key}
+          {...register('paymentMethod')}
+        />
+      ))}
+
+      {paymentMethodError && <RegularText>{paymentMethodError}</RegularText>}
     </PaymentMethodOptionsContainer>
   )
 }

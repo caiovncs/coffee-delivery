@@ -11,6 +11,7 @@ export const HeaderContainer = styled.header`
   top: 0;
   left: 0;
   z-index: 5;
+  padding: 2rem;
 
   > div {
     width: 100%;
